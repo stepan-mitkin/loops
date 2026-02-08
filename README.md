@@ -16,7 +16,7 @@ Loops diagrams resemble sequence diagrams.
 
 [See more examples of Loops diagrams](https://stepan-mitkin.github.io/loops/loops2)
 
-[Run an interactive demo of Loops in the browser](https://stepan-mitkin.github.io/loops/loops2)
+[Run an interactive demo of Loops in the browser](https://stepan-mitkin.github.io/loops/loops2-lift)
 
 ## Status
 
@@ -46,7 +46,7 @@ Loops programs are defined as **diagrams**.
 
 A typical Loops class has several Loops programs.
 
-Diagrams are drawn using the **DrakonHub** editor and saved as structured data.
+Diagrams are drawn using the [DrakonHub](https://github.com/stepan-mitkin/drakonhub_desktop) editor and saved as structured data.
 
 Each diagram describes:
 
@@ -111,7 +111,7 @@ In other words:
 
 This repository includes an **interactive animated browser demo**.
 
-[Run an interactive demo of Loops in the browser](https://stepan-mitkin.github.io/loops/loops2)
+[Run an interactive demo of Loops in the browser](https://stepan-mitkin.github.io/loops/loops2-lift)
 
 The demo exists for a reason:
 
