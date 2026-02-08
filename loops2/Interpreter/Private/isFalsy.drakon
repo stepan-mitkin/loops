@@ -1,0 +1,60 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "4"
+        },
+        "3": {
+            "type": "action",
+            "one": "1",
+            "content": "return true "
+        },
+        "4": {
+            "type": "question",
+            "one": "3",
+            "two": "6",
+            "flag1": 1,
+            "content": "value === false "
+        },
+        "6": {
+            "type": "question",
+            "one": "3",
+            "two": "9",
+            "flag1": 1,
+            "content": "value === undefined "
+        },
+        "9": {
+            "type": "question",
+            "one": "3",
+            "two": "10",
+            "flag1": 1,
+            "content": "value === \"\""
+        },
+        "10": {
+            "type": "question",
+            "one": "3",
+            "two": "11",
+            "flag1": 1,
+            "content": "value === null "
+        },
+        "11": {
+            "type": "action",
+            "one": "1",
+            "content": "return false "
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "value"
+}

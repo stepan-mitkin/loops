@@ -1,0 +1,61 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "content": "target = arg"
+        },
+        "4": {
+            "type": "question",
+            "one": "6",
+            "two": "5",
+            "flag1": 1,
+            "content": "target > current"
+        },
+        "5": {
+            "type": "question",
+            "one": "7",
+            "two": "1",
+            "flag1": 1,
+            "content": "target < current"
+        },
+        "6": {
+            "type": "action",
+            "one": "8",
+            "content": "state = \"up\""
+        },
+        "7": {
+            "type": "action",
+            "one": "9",
+            "content": "state = \"down\""
+        },
+        "8": {
+            "type": "action",
+            "one": "1",
+            "content": "requestUpdate()"
+        },
+        "9": {
+            "type": "action",
+            "one": "1",
+            "content": "requestUpdate()"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": true,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "arg"
+}

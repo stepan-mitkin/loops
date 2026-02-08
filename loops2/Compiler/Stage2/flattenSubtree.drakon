@@ -1,0 +1,142 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "38",
+            "content": "Branch1"
+        },
+        "3": {
+            "type": "action",
+            "one": "11",
+            "content": "item = items[id]"
+        },
+        "4": {
+            "type": "question",
+            "one": "3",
+            "two": "41",
+            "flag1": 1,
+            "content": "id"
+        },
+        "10": {
+            "type": "branch",
+            "one": "1",
+            "branchId": 3,
+            "content": "Exit"
+        },
+        "11": {
+            "type": "branch",
+            "one": "12",
+            "branchId": 2,
+            "content": "Rectangle"
+        },
+        "12": {
+            "type": "question",
+            "one": "36",
+            "two": "15",
+            "flag1": 1,
+            "content": "item.outLeft"
+        },
+        "15": {
+            "type": "question",
+            "one": "34",
+            "two": "37",
+            "flag1": 0,
+            "content": "item.outRight"
+        },
+        "24": {
+            "type": "action",
+            "one": "29",
+            "content": "createFun(context, item)"
+        },
+        "27": {
+            "type": "action",
+            "one": "10",
+            "content": "flattenSubtree(items, context, item.next)"
+        },
+        "29": {
+            "type": "action",
+            "one": "10",
+            "content": "flattenSubtree(\n    items,\n    context,\n    item.next,\n    nextPrev\n)"
+        },
+        "30": {
+            "type": "action",
+            "one": "31",
+            "content": "flattenSubtree(items, context, item.next)"
+        },
+        "31": {
+            "type": "action",
+            "one": "10",
+            "content": "flattenSubtree(\n    items,\n    context,\n    item.outRight\n)"
+        },
+        "32": {
+            "type": "question",
+            "one": "39",
+            "two": "33",
+            "flag1": 0,
+            "content": "item.join"
+        },
+        "33": {
+            "type": "action",
+            "one": "29",
+            "content": "createReceive(context, item)"
+        },
+        "34": {
+            "type": "question",
+            "one": "32",
+            "two": "35",
+            "flag1": 0,
+            "content": "item.type === \"rounded\""
+        },
+        "35": {
+            "type": "action",
+            "one": "10",
+            "content": "createLoopCall(\n    items,\n    context,\n    item,\n    prev\n)"
+        },
+        "36": {
+            "type": "action",
+            "one": "27",
+            "content": "handleLeftArrow(items, context, item)"
+        },
+        "37": {
+            "type": "action",
+            "one": "30",
+            "content": "handleRightArrow(items, context, item)"
+        },
+        "38": {
+            "type": "action",
+            "one": "4",
+            "content": "nextPrev = undefined "
+        },
+        "39": {
+            "type": "action",
+            "one": "40",
+            "content": "nextPrev = tryParseFanOut(item)"
+        },
+        "40": {
+            "type": "question",
+            "one": "24",
+            "two": "29",
+            "flag1": 0,
+            "content": "nextPrev"
+        },
+        "41": {
+            "type": "action",
+            "one": "10",
+            "content": "context.ops.push({op: \"end\"})"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "items\ncontext\nid\nprev"
+}

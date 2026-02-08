@@ -1,0 +1,148 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "content": "begin = diagram.items[item.begin]"
+        },
+        "4": {
+            "type": "action",
+            "one": "8",
+            "content": "end = diagram.items[item.end]"
+        },
+        "5": {
+            "type": "question",
+            "one": "6",
+            "two": "14",
+            "flag1": 1,
+            "content": "item.role === \"horizontal\""
+        },
+        "6": {
+            "type": "question",
+            "one": "7",
+            "two": "25",
+            "flag1": 1,
+            "content": "begin.left < end.left"
+        },
+        "7": {
+            "type": "action",
+            "one": "30",
+            "content": "left = item.begin\nright = item.end"
+        },
+        "8": {
+            "type": "question",
+            "one": "9",
+            "two": "10",
+            "flag1": 1,
+            "content": "item.style"
+        },
+        "9": {
+            "type": "action",
+            "one": "16",
+            "content": "style = JSON.parse(item.style)"
+        },
+        "10": {
+            "type": "action",
+            "one": "16",
+            "content": "style = {}"
+        },
+        "12": {
+            "type": "action",
+            "one": "33",
+            "content": "top = item.begin\nbottom = item.end"
+        },
+        "13": {
+            "type": "action",
+            "one": "30",
+            "content": "left = item.end\nright = item.begin"
+        },
+        "14": {
+            "type": "question",
+            "one": "12",
+            "two": "15",
+            "flag1": 1,
+            "content": "begin.top < end.top"
+        },
+        "15": {
+            "type": "action",
+            "one": "33",
+            "content": "top = item.end\nbottom = item.begin"
+        },
+        "16": {
+            "type": "question",
+            "one": "18",
+            "two": "17",
+            "flag1": 1,
+            "content": "style.headStyle === \"arrow\""
+        },
+        "17": {
+            "type": "question",
+            "one": "18",
+            "two": "21",
+            "flag1": 0,
+            "content": "style.tailStyle === \"arrow\""
+        },
+        "18": {
+            "type": "action",
+            "one": "5",
+            "content": "direct = true "
+        },
+        "21": {
+            "type": "action",
+            "one": "5",
+            "content": "direct = false "
+        },
+        "25": {
+            "type": "action",
+            "one": "13",
+            "content": "direct = !direct"
+        },
+        "29": {
+            "type": "action",
+            "one": "32",
+            "two": "",
+            "content": "direction = \"right\""
+        },
+        "30": {
+            "type": "question",
+            "one": "29",
+            "two": "31",
+            "flag1": 1,
+            "content": "direct"
+        },
+        "31": {
+            "type": "action",
+            "one": "32",
+            "two": "",
+            "content": "direction = \"left\""
+        },
+        "32": {
+            "type": "action",
+            "one": "1",
+            "content": "return {\n    id: id,\n    type: item.type,\n    role: item.role,\n    left: left,\n    right: right,\n    direction: direction\n}"
+        },
+        "33": {
+            "type": "action",
+            "one": "1",
+            "content": "return {\n    id: id,\n    type: item.type,\n    role: item.role,\n    top: top,\n    bottom: bottom\n}"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "diagram\nid\nitem"
+}

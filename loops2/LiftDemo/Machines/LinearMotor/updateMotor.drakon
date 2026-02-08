@@ -1,0 +1,116 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "7"
+        },
+        "4": {
+            "type": "case",
+            "one": "18"
+        },
+        "5": {
+            "type": "case",
+            "one": "20",
+            "two": "4",
+            "content": "\"down\""
+        },
+        "6": {
+            "type": "case",
+            "one": "19",
+            "two": "5",
+            "content": "\"up\""
+        },
+        "7": {
+            "type": "select",
+            "one": "6",
+            "content": "state"
+        },
+        "8": {
+            "type": "action",
+            "one": "9",
+            "content": "current += velocity * dt"
+        },
+        "9": {
+            "type": "question",
+            "one": "18",
+            "two": "10",
+            "flag1": 0,
+            "content": "current >= target"
+        },
+        "10": {
+            "type": "action",
+            "one": "11",
+            "content": "current = target"
+        },
+        "11": {
+            "type": "action",
+            "one": "12",
+            "content": "output.done = true "
+        },
+        "12": {
+            "type": "action",
+            "one": "18",
+            "content": "state = \"idle\""
+        },
+        "13": {
+            "type": "action",
+            "one": "14",
+            "two": "",
+            "content": "current -= velocity * dt"
+        },
+        "14": {
+            "type": "question",
+            "one": "18",
+            "two": "15",
+            "flag1": 0,
+            "content": "current <= target"
+        },
+        "15": {
+            "type": "action",
+            "one": "16",
+            "two": "",
+            "content": "current = target"
+        },
+        "16": {
+            "type": "action",
+            "one": "17",
+            "two": "",
+            "content": "output.done = true "
+        },
+        "17": {
+            "type": "action",
+            "one": "18",
+            "two": "",
+            "content": "state = \"idle\""
+        },
+        "18": {
+            "type": "action",
+            "one": "1",
+            "content": "output.position = current"
+        },
+        "19": {
+            "type": "action",
+            "one": "8",
+            "content": "requestUpdate()"
+        },
+        "20": {
+            "type": "action",
+            "one": "13",
+            "content": "requestUpdate()"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": true,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "dt\noutput"
+}

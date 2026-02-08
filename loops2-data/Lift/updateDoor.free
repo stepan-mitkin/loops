@@ -1,0 +1,333 @@
+{
+    "items": {
+        "10": {
+            "zIndex": 0,
+            "width": 135,
+            "top": -115,
+            "style": "{\"font\":\"bold 15px Arimo\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}",
+            "left": -290,
+            "type": "f_begin",
+            "content": "<p>door</p>",
+            "height": 50
+        },
+        "12": {
+            "zIndex": 1,
+            "width": 115,
+            "top": -115,
+            "style": "{\"font\":\"bold 15px Arimo\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}",
+            "left": -110,
+            "type": "f_begin",
+            "content": "<p>cabin</p>",
+            "height": 50
+        },
+        "39": {
+            "zIndex": 2,
+            "left": -290,
+            "top": 50,
+            "type": "rectangle",
+            "content": "<p>done?</p>",
+            "height": 50,
+            "width": 135
+        },
+        "61": {
+            "zIndex": 3,
+            "width": 120,
+            "top": -115,
+            "style": "{\"font\":\"bold 15px Arimo\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}",
+            "left": 195,
+            "type": "f_begin",
+            "content": "<p>cabin</p>",
+            "height": 50
+        },
+        "63": {
+            "zIndex": 4,
+            "width": 120,
+            "top": 195,
+            "left": 195,
+            "content": "<p>waitOpen</p>",
+            "type": "rounded",
+            "aux": 10,
+            "height": 50
+        },
+        "64": {
+            "zIndex": 5,
+            "width": 115,
+            "top": 50,
+            "left": -110,
+            "content": "<p>onDoor</p>",
+            "type": "rounded",
+            "aux": 10,
+            "height": 50
+        },
+        "67": {
+            "zIndex": 19,
+            "begin": "12",
+            "role": "vertical",
+            "type": "connection",
+            "end": "64",
+            "style": "{\"headStyle\":\"none\"}"
+        },
+        "71": {
+            "zIndex": 20,
+            "begin": "61",
+            "role": "vertical",
+            "type": "connection",
+            "end": "63",
+            "style": "{\"headStyle\":\"none\"}"
+        },
+        "78": {
+            "zIndex": 6,
+            "width": 135,
+            "top": -25,
+            "left": -290,
+            "content": "<p>updateMotor</p>",
+            "type": "rounded",
+            "aux": 10,
+            "height": 50
+        },
+        "79": {
+            "zIndex": 21,
+            "begin": "39",
+            "role": "horizontal",
+            "type": "connection",
+            "end": "64",
+            "style": "{\"font\":\"15px Arimo\",\"headStyle\":\"arrow\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "82": {
+            "zIndex": 7,
+            "left": -110,
+            "top": 195,
+            "type": "rectangle",
+            "content": "<p>opened?</p>",
+            "height": 50,
+            "width": 115
+        },
+        "83": {
+            "zIndex": 22,
+            "begin": "82",
+            "role": "horizontal",
+            "type": "connection",
+            "end": "63",
+            "style": "{\"font\":\"15px Arimo\",\"headStyle\":\"arrow\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "88": {
+            "zIndex": 8,
+            "width": 120,
+            "top": -115,
+            "style": "{\"font\":\"bold 15px Arimo\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}",
+            "left": 50,
+            "type": "f_begin",
+            "content": "<p>motor</p>",
+            "height": 50
+        },
+        "89": {
+            "zIndex": 9,
+            "left": -110,
+            "top": 120,
+            "type": "rectangle",
+            "content": "<p>motorTarget?</p>",
+            "height": 50,
+            "width": 115
+        },
+        "92": {
+            "zIndex": 10,
+            "width": 120,
+            "top": 120,
+            "left": 50,
+            "content": "<p>start</p>",
+            "type": "rounded",
+            "aux": 10,
+            "height": 50
+        },
+        "98": {
+            "zIndex": 14,
+            "begin": "89",
+            "role": "horizontal",
+            "type": "connection",
+            "end": "92",
+            "style": "{\"headStyle\":\"arrow\"}"
+        },
+        "99": {
+            "zIndex": 11,
+            "left": 195,
+            "top": 270,
+            "type": "rectangle",
+            "content": "<p>doorTarget</p>",
+            "height": 50,
+            "width": 120
+        },
+        "100": {
+            "zIndex": 12,
+            "width": 120,
+            "top": -115,
+            "style": "{\"font\":\"bold 15px Arimo\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}",
+            "left": 360,
+            "type": "f_begin",
+            "content": "<p>door</p>",
+            "height": 50
+        },
+        "101": {
+            "zIndex": 13,
+            "width": 120,
+            "top": 270,
+            "left": 360,
+            "content": "<p>start</p>",
+            "type": "rounded",
+            "aux": 10,
+            "height": 50
+        },
+        "102": {
+            "zIndex": 17,
+            "begin": "99",
+            "role": "horizontal",
+            "type": "connection",
+            "end": "101",
+            "style": "{\"headStyle\":\"arrow\"}"
+        },
+        "103": {
+            "zIndex": 17,
+            "begin": "88",
+            "role": "vertical",
+            "type": "connection",
+            "end": "92",
+            "style": "{\"font\":\"15px Arimo\",\"headStyle\":\"none\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "104": {
+            "zIndex": 17,
+            "begin": "63",
+            "role": "vertical",
+            "type": "connection",
+            "end": "99",
+            "style": "{\"headStyle\":\"none\"}"
+        },
+        "105": {
+            "zIndex": 17,
+            "begin": "100",
+            "role": "vertical",
+            "type": "connection",
+            "end": "101",
+            "style": "{\"headStyle\":\"none\"}"
+        },
+        "106": {
+            "zIndex": 17,
+            "begin": "64",
+            "role": "vertical",
+            "type": "connection",
+            "end": "89",
+            "style": "{\"headStyle\":\"none\"}"
+        },
+        "107": {
+            "zIndex": 17,
+            "begin": "89",
+            "role": "vertical",
+            "type": "connection",
+            "end": "82",
+            "style": "{\"headStyle\":\"none\"}"
+        },
+        "108": {
+            "zIndex": 14,
+            "width": 230,
+            "top": -115,
+            "style": "{\"font\":\"bold 15px Arimo\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}",
+            "left": 510,
+            "type": "f_begin",
+            "content": "<p>buttons</p>",
+            "height": 50
+        },
+        "109": {
+            "zIndex": 15,
+            "left": 510,
+            "top": 345,
+            "type": "rectangle",
+            "content": "<p>MANY getButtonsByFloor floor</p>",
+            "height": 50,
+            "width": 230
+        },
+        "110": {
+            "zIndex": 16,
+            "width": 230,
+            "top": 415,
+            "left": 510,
+            "content": "<p>resetButton</p>",
+            "type": "rounded",
+            "aux": 10,
+            "height": 50
+        },
+        "111": {
+            "zIndex": 15,
+            "begin": "109",
+            "role": "vertical",
+            "type": "connection",
+            "end": "110",
+            "style": "{\"headStyle\":\"none\"}"
+        },
+        "112": {
+            "zIndex": 15,
+            "begin": "108",
+            "role": "vertical",
+            "type": "connection",
+            "end": "109",
+            "style": "{\"font\":\"15px Arimo\",\"headStyle\":\"none\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "113": {
+            "zIndex": 17,
+            "left": -110,
+            "top": 345,
+            "type": "rectangle",
+            "content": "<p>floor?</p>",
+            "height": 50,
+            "width": 115
+        },
+        "114": {
+            "zIndex": 21,
+            "begin": "113",
+            "role": "horizontal",
+            "type": "connection",
+            "end": "109",
+            "style": "{\"headStyle\":\"arrow\"}"
+        },
+        "115": {
+            "zIndex": 21,
+            "begin": "82",
+            "role": "vertical",
+            "type": "connection",
+            "end": "113",
+            "style": "{\"font\":\"15px Arimo\",\"headStyle\":\"none\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "116": {
+            "zIndex": 18,
+            "left": -420,
+            "top": -115,
+            "type": "rectangle",
+            "content": "<p>dt</p>",
+            "height": 50,
+            "width": 95
+        },
+        "117": {
+            "zIndex": 22,
+            "begin": "116",
+            "role": "horizontal",
+            "type": "connection",
+            "end": "10",
+            "style": "{\"headStyle\":\"none\"}"
+        },
+        "118": {
+            "zIndex": 21,
+            "begin": "10",
+            "role": "vertical",
+            "type": "connection",
+            "end": "78",
+            "style": "{\"headStyle\":\"none\"}"
+        },
+        "119": {
+            "zIndex": 19,
+            "begin": "78",
+            "role": "vertical",
+            "type": "connection",
+            "end": "39",
+            "style": "{\"headStyle\":\"none\"}"
+        }
+    },
+    "type": "free",
+    "id": "updateDoor.free"
+}

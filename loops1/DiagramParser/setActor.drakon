@@ -1,0 +1,43 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "6"
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "content": "item.actor = actor"
+        },
+        "4": {
+            "type": "question",
+            "one": "1",
+            "two": "5",
+            "flag1": 0,
+            "content": "item.next"
+        },
+        "5": {
+            "type": "action",
+            "one": "6",
+            "content": "item = items[item.next]"
+        },
+        "6": {
+            "type": "arrow-loop",
+            "one": "3"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "items\nitem\nactor"
+}

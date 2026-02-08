@@ -1,0 +1,67 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "5"
+        },
+        "3": {
+            "type": "action",
+            "one": "11",
+            "content": "result = fun(\n    actor,\n    interpreter.globalContext,\n    runState.locals\n)"
+        },
+        "4": {
+            "type": "action",
+            "one": "1",
+            "content": "stack.push(op.next)"
+        },
+        "5": {
+            "type": "action",
+            "one": "12",
+            "content": "fun = interpreter.functions[op.fun]"
+        },
+        "8": {
+            "type": "question",
+            "one": "4",
+            "two": "9",
+            "flag1": 0,
+            "content": "result"
+        },
+        "9": {
+            "type": "question",
+            "one": "4",
+            "two": "10",
+            "flag1": 0,
+            "content": " typeof result.then === \"function\""
+        },
+        "10": {
+            "type": "action",
+            "one": "1",
+            "content": "result.then(\n    function () {\n        stack.push(op.next)\n        traverseOps(\n            interpreter,\n            loop,\n            runState\n        )\n    }\n)"
+        },
+        "11": {
+            "type": "action",
+            "one": "8",
+            "content": "stack = runState.stack"
+        },
+        "12": {
+            "type": "action",
+            "one": "3",
+            "two": "",
+            "content": "actor = interpreter.actors[op.actor]"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "interpreter\nloop\nrunState\nop"
+}

@@ -1,0 +1,37 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "5"
+        },
+        "3": {
+            "type": "action",
+            "one": "8",
+            "content": "obj = await loadJson(path)"
+        },
+        "5": {
+            "type": "action",
+            "one": "3",
+            "content": "path = folder + \"/\" + type + \"/\" + name +\n\".free\""
+        },
+        "8": {
+            "type": "action",
+            "one": "1",
+            "content": "compiler.addLoop(type, name, obj)"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": true,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "compiler\nfolder\ntype\nname"
+}

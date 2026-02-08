@@ -1,0 +1,46 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "12"
+        },
+        "12": {
+            "type": "action",
+            "one": "13",
+            "two": "",
+            "content": "collection = obj.actors[op.actor]"
+        },
+        "13": {
+            "type": "action",
+            "one": "15",
+            "two": "",
+            "content": "fun = obj.obj[op.many]"
+        },
+        "14": {
+            "type": "action",
+            "one": "1",
+            "two": "",
+            "content": "return fun(collection, arg)"
+        },
+        "15": {
+            "type": "action",
+            "one": "14",
+            "two": "",
+            "content": "arg = frame.locals[op.arg]"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "obj\nframe\nop"
+}

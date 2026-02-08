@@ -1,0 +1,50 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "12"
+        },
+        "4": {
+            "type": "action",
+            "one": "5",
+            "two": "",
+            "content": "fun(arg)"
+        },
+        "5": {
+            "type": "action",
+            "one": "1",
+            "two": "",
+            "content": "stack.push(op.next)"
+        },
+        "6": {
+            "type": "action",
+            "one": "11",
+            "two": "",
+            "content": "fun = interpreter.callbacks[op.callback]"
+        },
+        "11": {
+            "type": "action",
+            "one": "4",
+            "content": "arg = getVariable(interpreter, op)"
+        },
+        "12": {
+            "type": "action",
+            "one": "6",
+            "content": "stack = runState.stack"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "interpreter\nloop\nrunState\nop"
+}

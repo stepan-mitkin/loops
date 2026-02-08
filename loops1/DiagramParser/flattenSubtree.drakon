@@ -1,0 +1,179 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "4",
+            "content": "Branch1"
+        },
+        "3": {
+            "type": "action",
+            "one": "6",
+            "content": "item = items[id]"
+        },
+        "4": {
+            "type": "question",
+            "one": "3",
+            "two": "5",
+            "flag1": 1,
+            "content": "id"
+        },
+        "5": {
+            "type": "action",
+            "one": "10",
+            "content": "context.ops.push({op: \"end\"})"
+        },
+        "6": {
+            "type": "question",
+            "one": "8",
+            "two": "7",
+            "flag1": 1,
+            "content": "item.type === \"rectangle\""
+        },
+        "7": {
+            "type": "action",
+            "one": "10",
+            "content": "flattenSubtree(items, context, item.next)"
+        },
+        "8": {
+            "type": "action",
+            "one": "9",
+            "content": "ordinal = context.ops.length"
+        },
+        "9": {
+            "type": "action",
+            "one": "11",
+            "content": "context.idToOrdinal[id] = ordinal"
+        },
+        "10": {
+            "type": "branch",
+            "one": "1",
+            "branchId": 3,
+            "content": "Exit"
+        },
+        "11": {
+            "type": "branch",
+            "one": "18",
+            "branchId": 2,
+            "content": "Rectangle"
+        },
+        "12": {
+            "type": "question",
+            "one": "13",
+            "two": "15",
+            "flag1": 1,
+            "content": "item.outLeft"
+        },
+        "13": {
+            "type": "question",
+            "one": "16",
+            "two": "14",
+            "flag1": 0,
+            "content": "item.outRight"
+        },
+        "14": {
+            "type": "action",
+            "one": "10",
+            "content": "throw new Error(\n    \"Two outgoing errors from rectangle\"\n)"
+        },
+        "15": {
+            "type": "question",
+            "one": "32",
+            "two": "17",
+            "flag1": 0,
+            "content": "item.outRight"
+        },
+        "16": {
+            "type": "action",
+            "one": "21",
+            "content": "left = items[item.outLeft]"
+        },
+        "17": {
+            "type": "action",
+            "one": "25",
+            "content": "right = items[item.outRight]"
+        },
+        "18": {
+            "type": "action",
+            "one": "12",
+            "content": "text = getText(item)"
+        },
+        "21": {
+            "type": "question",
+            "one": "23",
+            "two": "22",
+            "flag1": 0,
+            "content": "left.type === \"f_ptr_left\""
+        },
+        "22": {
+            "type": "action",
+            "one": "28",
+            "content": "createCallback(context, item, left)"
+        },
+        "23": {
+            "type": "action",
+            "one": "27",
+            "content": "createFeedback(context, item, left)"
+        },
+        "24": {
+            "type": "action",
+            "one": "29",
+            "content": "createFun(context, item)"
+        },
+        "25": {
+            "type": "action",
+            "one": "30",
+            "content": "createChunk(context, item, right)"
+        },
+        "27": {
+            "type": "action",
+            "one": "10",
+            "content": "flattenSubtree(items, context, item.next)"
+        },
+        "28": {
+            "type": "action",
+            "one": "10",
+            "content": "flattenSubtree(items, context, item.next)"
+        },
+        "29": {
+            "type": "action",
+            "one": "10",
+            "content": "flattenSubtree(items, context, item.next)"
+        },
+        "30": {
+            "type": "action",
+            "one": "31",
+            "content": "flattenSubtree(items, context, item.next)"
+        },
+        "31": {
+            "type": "action",
+            "one": "10",
+            "content": "flattenSubtree(items, context, right.next)"
+        },
+        "32": {
+            "type": "question",
+            "one": "24",
+            "two": "33",
+            "flag1": 0,
+            "content": "item.join"
+        },
+        "33": {
+            "type": "action",
+            "one": "29",
+            "content": "createReceive(context, item)"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "items\ncontext\nid"
+}

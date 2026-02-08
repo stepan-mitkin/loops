@@ -1,0 +1,105 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "17"
+        },
+        "4": {
+            "type": "question",
+            "one": "19",
+            "two": "13",
+            "flag1": 0,
+            "content": "requestedCurrentFloor()"
+        },
+        "7": {
+            "type": "case",
+            "one": "1"
+        },
+        "8": {
+            "type": "case",
+            "one": "12",
+            "two": "11",
+            "content": "\"closing\""
+        },
+        "9": {
+            "type": "case",
+            "one": "4",
+            "two": "8",
+            "content": "\"closedstill\""
+        },
+        "10": {
+            "type": "select",
+            "one": "9",
+            "content": "state"
+        },
+        "11": {
+            "one": "21",
+            "type": "case",
+            "two": "7",
+            "content": "\"moving\""
+        },
+        "12": {
+            "type": "question",
+            "one": "1",
+            "two": "15",
+            "flag1": 0,
+            "content": "requestedCurrentFloor()"
+        },
+        "13": {
+            "type": "action",
+            "one": "14",
+            "content": "output.doorTarget = 1"
+        },
+        "14": {
+            "type": "action",
+            "one": "1",
+            "content": "state = \"opening\""
+        },
+        "15": {
+            "type": "action",
+            "one": "16",
+            "two": "",
+            "content": "output.doorTarget = 1"
+        },
+        "16": {
+            "type": "action",
+            "one": "1",
+            "two": "",
+            "content": "state = \"opening\""
+        },
+        "17": {
+            "type": "action",
+            "one": "10",
+            "content": "addNewTarget(button)"
+        },
+        "19": {
+            "type": "action",
+            "one": "1",
+            "content": "state = startMovement(output)"
+        },
+        "21": {
+            "type": "action",
+            "one": "22",
+            "content": "target = updateDestination()"
+        },
+        "22": {
+            "type": "action",
+            "one": "1",
+            "content": "output.motorTarget = floorToPosition(\n    target\n)"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": true,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "button\noutput"
+}

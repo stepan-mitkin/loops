@@ -1,0 +1,33 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "5"
+        },
+        "5": {
+            "type": "action",
+            "one": "6",
+            "two": "",
+            "content": "op = {\n    op: \"callback\",\n    callback: getText(left),\n    variable: getText(item),\n    actor: item.actor\n}"
+        },
+        "6": {
+            "type": "action",
+            "one": "1",
+            "content": "pushOp(context, op)"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "context\nitem\nleft"
+}

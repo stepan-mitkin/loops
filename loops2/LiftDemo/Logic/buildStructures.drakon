@@ -1,0 +1,152 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "9",
+            "content": "Lift type"
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "two": "",
+            "content": "compiler = Compiler()"
+        },
+        "4": {
+            "type": "action",
+            "one": "5",
+            "two": "",
+            "content": "compiler.createType(\"Lift\")"
+        },
+        "5": {
+            "type": "action",
+            "one": "7",
+            "two": "",
+            "content": "liftMethods = [\n    \"onClick\",\n    \"updateDoor\",\n    \"updateMotor\"\n]"
+        },
+        "6": {
+            "type": "loopend",
+            "one": "10",
+            "two": "",
+            "content": ""
+        },
+        "7": {
+            "type": "loopbegin",
+            "one": "8",
+            "two": "",
+            "content": "method; liftMethods"
+        },
+        "8": {
+            "type": "action",
+            "one": "6",
+            "two": "",
+            "content": "await addLoopToType(\n    compiler,\n    folder,\n    \"Lift\",\n    method\n)"
+        },
+        "9": {
+            "type": "action",
+            "one": "3",
+            "content": "folder = \"loops2-data\""
+        },
+        "10": {
+            "type": "action",
+            "one": "13",
+            "content": "liftType = compiler.getType(\"Lift\")"
+        },
+        "11": {
+            "type": "branch",
+            "one": "36",
+            "branchId": 4,
+            "content": "Callbacks"
+        },
+        "12": {
+            "type": "branch",
+            "one": "29",
+            "branchId": 3,
+            "content": "Other actors"
+        },
+        "13": {
+            "type": "branch",
+            "branchId": 2,
+            "one": "14",
+            "content": "Buttons"
+        },
+        "14": {
+            "type": "action",
+            "one": "32",
+            "content": "inter = Interpreter()\nglobals.inter = inter"
+        },
+        "15": {
+            "type": "loopend",
+            "one": "12",
+            "content": ""
+        },
+        "16": {
+            "type": "loopbegin",
+            "one": "18",
+            "content": "floor = 1; floor <= floorCount; floor++"
+        },
+        "18": {
+            "type": "action",
+            "one": "28",
+            "content": "up = (floor !== floorCount)\ndown = (floor !== 1)"
+        },
+        "28": {
+            "type": "action",
+            "one": "15",
+            "content": "createFloor(\n    inter,\n    buttons,\n    floor,\n    up,\n    down\n)"
+        },
+        "29": {
+            "type": "action",
+            "one": "30",
+            "content": "cabin = inter.createCodeObject(Cabin())"
+        },
+        "30": {
+            "type": "action",
+            "one": "31",
+            "content": "motor = inter.createCodeObject(\n    LinearMotor(\n        cabinVelocity,\n        floorToPosition(1)\n    )\n)"
+        },
+        "31": {
+            "type": "action",
+            "one": "33",
+            "content": "door = inter.createCodeObject(\n    LinearMotor(doorVelocity, 0)\n)"
+        },
+        "32": {
+            "type": "action",
+            "one": "16",
+            "content": "buttons = []"
+        },
+        "33": {
+            "type": "action",
+            "one": "34",
+            "content": "actors = {\n    buttons: buttons,\n    cabin: cabin,\n    motor: motor,\n    door: door\n}"
+        },
+        "34": {
+            "type": "action",
+            "one": "35",
+            "content": "lift = inter.createLoopObject(\n    liftType,\n    actors,\n    Lift()\n)"
+        },
+        "35": {
+            "type": "action",
+            "one": "11",
+            "content": "globals.lift = lift"
+        },
+        "36": {
+            "type": "action",
+            "one": "1",
+            "content": "inter.addCallbacks(\n    {requestUpdate: requestUpdate}\n)"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": true,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": ""
+}

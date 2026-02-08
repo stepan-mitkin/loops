@@ -1,0 +1,63 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "4"
+        },
+        "4": {
+            "type": "question",
+            "one": "6",
+            "two": "5",
+            "flag1": 0,
+            "content": "op.targetOp"
+        },
+        "5": {
+            "type": "action",
+            "one": "6",
+            "content": "op.targetOp = idToOrdinal[op.targetOp]"
+        },
+        "6": {
+            "type": "question",
+            "one": "1",
+            "two": "9",
+            "flag1": 0,
+            "content": "op.ports"
+        },
+        "8": {
+            "type": "loopend",
+            "one": "1",
+            "content": ""
+        },
+        "9": {
+            "type": "loopbegin",
+            "one": "11",
+            "content": "item; op.ports"
+        },
+        "10": {
+            "type": "action",
+            "one": "8",
+            "content": "item[1] = idToOrdinal[item[1]]"
+        },
+        "11": {
+            "type": "question",
+            "one": "10",
+            "two": "8",
+            "flag1": 0,
+            "content": "item[1] === -1"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "idToOrdinal\nop"
+}

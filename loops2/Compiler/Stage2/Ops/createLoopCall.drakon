@@ -1,0 +1,171 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "6"
+        },
+        "6": {
+            "type": "action",
+            "one": "34",
+            "two": "",
+            "content": "op = {\n    op: \"loop\",\n    loop: item.text,\n    actor: item.actor,\n    ports: []\n}"
+        },
+        "8": {
+            "type": "question",
+            "one": "1",
+            "two": "16",
+            "flag1": 0,
+            "content": "next"
+        },
+        "9": {
+            "type": "action",
+            "one": "20",
+            "content": "next = item.next"
+        },
+        "10": {
+            "type": "action",
+            "one": "20",
+            "content": "next = current.next"
+        },
+        "11": {
+            "type": "question",
+            "one": "12",
+            "two": "13",
+            "flag1": 1,
+            "content": "current.type === \"rectangle\""
+        },
+        "12": {
+            "type": "question",
+            "one": "14",
+            "two": "15",
+            "flag1": 1,
+            "content": "current.outLeft"
+        },
+        "13": {
+            "type": "action",
+            "one": "12",
+            "content": "throw new Error(\"A rectangle expected\")"
+        },
+        "14": {
+            "type": "action",
+            "one": "26",
+            "content": "handleLeftArrow(items, context, current)"
+        },
+        "15": {
+            "type": "question",
+            "one": "17",
+            "two": "27",
+            "flag1": 1,
+            "content": "current.outRight"
+        },
+        "16": {
+            "type": "action",
+            "one": "37",
+            "content": "current = items[next]"
+        },
+        "17": {
+            "type": "action",
+            "one": "25",
+            "content": "handleRightArrow(items, context, current)"
+        },
+        "19": {
+            "type": "action",
+            "one": "10",
+            "content": "op.ports.push([outputVar, current.id])"
+        },
+        "20": {
+            "type": "arrow-loop",
+            "one": "8"
+        },
+        "23": {
+            "type": "action",
+            "one": "19",
+            "content": "flattenSubtree(\n    items,\n    context,\n    current.outRight\n)"
+        },
+        "25": {
+            "type": "action",
+            "one": "23",
+            "content": "clearNext(context, end)"
+        },
+        "26": {
+            "type": "action",
+            "one": "19",
+            "content": "clearNext(context, end)"
+        },
+        "27": {
+            "type": "action",
+            "one": "10",
+            "content": "op.ports.push([outputVar, 0])"
+        },
+        "28": {
+            "type": "action",
+            "one": "36",
+            "content": "pushOp(context, item, op)"
+        },
+        "30": {
+            "type": "question",
+            "one": "31",
+            "two": "32",
+            "flag1": 1,
+            "content": "prev.one"
+        },
+        "31": {
+            "type": "action",
+            "one": "28",
+            "content": "op.one = prev.one\nop.arg = prev.arg"
+        },
+        "32": {
+            "type": "question",
+            "one": "33",
+            "two": "28",
+            "flag1": 1,
+            "content": "prev.many"
+        },
+        "33": {
+            "type": "action",
+            "one": "28",
+            "content": "op.many = prev.many\nop.arg = prev.arg"
+        },
+        "34": {
+            "type": "question",
+            "one": "39",
+            "two": "28",
+            "flag1": 1,
+            "content": "prev"
+        },
+        "35": {
+            "type": "action",
+            "one": "9",
+            "content": "context.ops.push({op: \"end\"})"
+        },
+        "36": {
+            "type": "action",
+            "one": "35",
+            "content": "end = context.ops.length"
+        },
+        "37": {
+            "type": "action",
+            "one": "11",
+            "content": "outputVar = parseConditionalVariable(\n    current,\n    {}\n)"
+        },
+        "39": {
+            "type": "action",
+            "one": "30",
+            "content": "item.id = prev.id"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "items\ncontext\nitem\nprev"
+}

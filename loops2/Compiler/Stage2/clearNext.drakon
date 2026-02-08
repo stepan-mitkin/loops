@@ -1,0 +1,37 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "5"
+        },
+        "3": {
+            "type": "action",
+            "one": "4",
+            "content": "last = ops.length - 1"
+        },
+        "4": {
+            "type": "action",
+            "one": "1",
+            "content": "ops[last].next = next"
+        },
+        "5": {
+            "type": "action",
+            "one": "3",
+            "content": "ops = context.ops"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "context\nnext"
+}

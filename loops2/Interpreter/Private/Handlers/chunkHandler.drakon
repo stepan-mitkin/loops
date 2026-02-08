@@ -1,0 +1,76 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "13"
+        },
+        "3": {
+            "type": "action",
+            "one": "1",
+            "content": "stack.push(op.targetOp)"
+        },
+        "5": {
+            "type": "action",
+            "one": "10",
+            "content": "arg = locals[op.variable]"
+        },
+        "8": {
+            "type": "question",
+            "one": "5",
+            "two": "9",
+            "flag1": 1,
+            "content": "op.variable"
+        },
+        "9": {
+            "type": "action",
+            "one": "10",
+            "content": "arg = undefined "
+        },
+        "10": {
+            "type": "action",
+            "one": "11",
+            "content": "frame.pocket = arg"
+        },
+        "11": {
+            "type": "action",
+            "one": "3",
+            "content": "stack.push(op.next)"
+        },
+        "12": {
+            "type": "question",
+            "one": "8",
+            "two": "14",
+            "flag1": 1,
+            "content": "checkCondition(op, locals)"
+        },
+        "13": {
+            "type": "action",
+            "one": "15",
+            "content": "locals = frame.locals"
+        },
+        "14": {
+            "type": "action",
+            "one": "1",
+            "content": "stack.push(op.next)"
+        },
+        "15": {
+            "type": "action",
+            "one": "12",
+            "content": "stack = frame.stack"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "obj\nloop\nframe\nop"
+}

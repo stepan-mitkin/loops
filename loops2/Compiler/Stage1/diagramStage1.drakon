@@ -1,0 +1,287 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "3",
+            "content": "Init"
+        },
+        "3": {
+            "type": "action",
+            "one": "72",
+            "content": "items = {}\nconnections = []\nheaders = []\nleftmost = Number.MAX_VALUE"
+        },
+        "23": {
+            "type": "branch",
+            "one": "27",
+            "branchId": 7,
+            "content": "Exit"
+        },
+        "24": {
+            "type": "branch",
+            "one": "30",
+            "branchId": 2,
+            "content": "Scan items"
+        },
+        "25": {
+            "type": "branch",
+            "branchId": 4,
+            "one": "40",
+            "content": "Connect manhattan"
+        },
+        "27": {
+            "type": "action",
+            "one": "1",
+            "content": "return {\n    name: name,\n    start: items[start].next,\n    params: params,\n    items: items\n}"
+        },
+        "28": {
+            "type": "loopend",
+            "one": "52",
+            "two": "",
+            "content": ""
+        },
+        "29": {
+            "type": "loopbegin",
+            "one": "31",
+            "two": "",
+            "content": "id, item; diagram.items"
+        },
+        "30": {
+            "type": "question",
+            "one": "29",
+            "two": "52",
+            "flag1": 1,
+            "content": "diagram.items"
+        },
+        "31": {
+            "type": "question",
+            "one": "32",
+            "two": "36",
+            "flag1": 0,
+            "content": "item.type === \"connection\""
+        },
+        "32": {
+            "type": "action",
+            "one": "33",
+            "two": "",
+            "content": "item2 = {\n    id: id,\n    text: extractText(item.content),\n    type: item.type,\n    left: item.left,\n    top: item.top,\n    width: item.width,\n    height: item.height\n}"
+        },
+        "33": {
+            "type": "question",
+            "one": "65",
+            "two": "38",
+            "flag1": 1,
+            "content": "item.type === \"f_begin\""
+        },
+        "36": {
+            "type": "action",
+            "one": "37",
+            "two": "",
+            "content": "item2 = normalizeConnection(\n    diagram,\n    id,\n    item\n)"
+        },
+        "37": {
+            "type": "action",
+            "one": "28",
+            "two": "",
+            "content": "connections.push(item2)"
+        },
+        "38": {
+            "type": "action",
+            "one": "28",
+            "two": "",
+            "content": "items[id] = item2"
+        },
+        "39": {
+            "type": "loopend",
+            "one": "76",
+            "content": ""
+        },
+        "40": {
+            "type": "loopbegin",
+            "one": "42",
+            "content": "conn; connections"
+        },
+        "42": {
+            "type": "question",
+            "one": "43",
+            "two": "45",
+            "flag1": 1,
+            "content": "conn.role === \"horizontal\""
+        },
+        "43": {
+            "type": "action",
+            "one": "47",
+            "content": "left = items[conn.left]\nright = items[conn.right]"
+        },
+        "45": {
+            "type": "action",
+            "one": "46",
+            "content": "top = items[conn.top]\nbottom = items[conn.bottom]"
+        },
+        "46": {
+            "type": "action",
+            "one": "39",
+            "content": "top.next = bottom.id"
+        },
+        "47": {
+            "type": "question",
+            "one": "61",
+            "two": "48",
+            "flag1": 1,
+            "content": "conn.direction === \"left\""
+        },
+        "48": {
+            "type": "action",
+            "one": "39",
+            "content": "left.outRight = conn.right"
+        },
+        "49": {
+            "type": "action",
+            "one": "39",
+            "content": "right.outLeft = conn.left"
+        },
+        "50": {
+            "type": "question",
+            "one": "38",
+            "two": "64",
+            "flag1": 0,
+            "content": "item.left < leftmost"
+        },
+        "51": {
+            "type": "action",
+            "one": "38",
+            "content": "start = id"
+        },
+        "52": {
+            "type": "branch",
+            "branchId": 3,
+            "one": "53",
+            "content": "Intermediat checks"
+        },
+        "53": {
+            "type": "question",
+            "one": "55",
+            "two": "54",
+            "flag1": 0,
+            "content": "headers.length === 0"
+        },
+        "54": {
+            "type": "action",
+            "one": "55",
+            "content": "throw new Error(\"No headers in diagram\")"
+        },
+        "55": {
+            "type": "question",
+            "one": "25",
+            "two": "56",
+            "flag1": 1,
+            "content": "start"
+        },
+        "56": {
+            "type": "action",
+            "one": "25",
+            "two": "",
+            "content": "throw new Error(\"No start in diagram\")"
+        },
+        "57": {
+            "type": "branch",
+            "branchId": 6,
+            "one": "59",
+            "content": "Set actor"
+        },
+        "58": {
+            "type": "loopend",
+            "one": "23",
+            "content": ""
+        },
+        "59": {
+            "type": "loopbegin",
+            "one": "63",
+            "content": "header; headers"
+        },
+        "60": {
+            "type": "action",
+            "one": "58",
+            "content": "setActor(items, header, actor)"
+        },
+        "61": {
+            "type": "action",
+            "one": "49",
+            "content": "left.join = true "
+        },
+        "63": {
+            "type": "action",
+            "one": "60",
+            "content": "actor = getText(header)"
+        },
+        "64": {
+            "type": "action",
+            "one": "51",
+            "content": "leftmost = item.left"
+        },
+        "65": {
+            "type": "action",
+            "one": "50",
+            "two": "",
+            "content": "headers.push(item2)"
+        },
+        "71": {
+            "type": "action",
+            "one": "24",
+            "content": "params = undefined "
+        },
+        "72": {
+            "type": "action",
+            "one": "71",
+            "content": "start = undefined "
+        },
+        "76": {
+            "type": "branch",
+            "branchId": 5,
+            "one": "78",
+            "content": "Input"
+        },
+        "77": {
+            "type": "loopend",
+            "one": "57",
+            "content": ""
+        },
+        "78": {
+            "type": "loopbegin",
+            "one": "79",
+            "content": "id, item; items"
+        },
+        "79": {
+            "type": "question",
+            "one": "81",
+            "two": "77",
+            "flag1": 1,
+            "content": "item.type === \"rectangle\""
+        },
+        "80": {
+            "type": "action",
+            "one": "77",
+            "content": "params = getText(item)"
+        },
+        "81": {
+            "type": "question",
+            "one": "80",
+            "two": "77",
+            "flag1": 1,
+            "content": "item.outRight === start"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "diagram\nname"
+}

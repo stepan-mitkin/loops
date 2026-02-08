@@ -1,0 +1,105 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "3",
+            "content": "Background"
+        },
+        "3": {
+            "type": "action",
+            "one": "32",
+            "content": "ctx = globals.canvas.getContext(\"2d\")"
+        },
+        "4": {
+            "type": "action",
+            "one": "20",
+            "content": "ctx.fillRect(\n    0,\n    0,\n    canvasWidth,\n    canvasHeight\n)"
+        },
+        "5": {
+            "type": "action",
+            "one": "11",
+            "content": "ctx.fillStyle = background"
+        },
+        "6": {
+            "type": "action",
+            "one": "5",
+            "content": "globals.ctx = ctx"
+        },
+        "11": {
+            "type": "action",
+            "one": "4",
+            "content": "canvasHeight = getCanvasHeight()"
+        },
+        "19": {
+            "type": "branch",
+            "one": "1",
+            "branchId": 5,
+            "content": "Exit"
+        },
+        "20": {
+            "type": "branch",
+            "one": "37",
+            "branchId": 2,
+            "content": "Floors"
+        },
+        "24": {
+            "type": "branch",
+            "branchId": 3,
+            "one": "41",
+            "content": "Cabin"
+        },
+        "25": {
+            "type": "branch",
+            "branchId": 4,
+            "one": "34",
+            "content": "Buttons"
+        },
+        "32": {
+            "type": "action",
+            "one": "6",
+            "content": "ctx.resetTransform()\nctx.scale(globals.retina, globals.retina)"
+        },
+        "33": {
+            "type": "loopend",
+            "one": "19",
+            "content": ""
+        },
+        "34": {
+            "type": "loopbegin",
+            "one": "35",
+            "content": "button; globals.lift.actors.buttons"
+        },
+        "35": {
+            "type": "action",
+            "one": "33",
+            "content": "button.obj.drawButton()"
+        },
+        "36": {
+            "type": "loopend",
+            "one": "24",
+            "two": "",
+            "content": ""
+        },
+        "37": {
+            "type": "loopbegin",
+            "one": "40",
+            "two": "",
+            "content": "floor = 1; floor <= floorCount; floor++"
+        },
+        "40": {
+            "type": "action",
+            "one": "36",
+            "content": "drawFloor(floor)"
+        },
+        "41": {
+            "type": "action",
+            "one": "25",
+            "content": "drawCabin(getCabinPos(), getDoorPos())"
+        }
+    }
+}

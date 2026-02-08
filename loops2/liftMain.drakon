@@ -1,0 +1,42 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "7"
+        },
+        "3": {
+            "type": "action",
+            "one": "5",
+            "content": "createCanvas()"
+        },
+        "5": {
+            "type": "action",
+            "one": "1",
+            "content": "redraw()"
+        },
+        "6": {
+            "type": "action",
+            "one": "3",
+            "content": "await buildStructures()"
+        },
+        "7": {
+            "type": "action",
+            "one": "6",
+            "content": "initLog()"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": true,
+        "export": true,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": ""
+}

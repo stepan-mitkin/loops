@@ -1,0 +1,96 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "6"
+        },
+        "4": {
+            "type": "question",
+            "one": "9",
+            "two": "5",
+            "flag1": 1,
+            "content": "text.startsWith(\"ONE \")"
+        },
+        "5": {
+            "type": "question",
+            "one": "10",
+            "two": "8",
+            "flag1": 1,
+            "content": "text.startsWith(\"MANY \")"
+        },
+        "6": {
+            "type": "action",
+            "one": "7",
+            "content": "text = item.text || \"\""
+        },
+        "7": {
+            "type": "action",
+            "one": "4",
+            "content": "text = text.trim()"
+        },
+        "8": {
+            "type": "action",
+            "one": "1",
+            "content": "return undefined "
+        },
+        "9": {
+            "type": "action",
+            "one": "11",
+            "content": "text2 = text.substring(4).trim()"
+        },
+        "10": {
+            "type": "action",
+            "one": "12",
+            "content": "text2 = text.substring(5).trim()"
+        },
+        "11": {
+            "type": "action",
+            "one": "18",
+            "content": "type = \"one\""
+        },
+        "12": {
+            "type": "action",
+            "one": "18",
+            "content": "type = \"many\""
+        },
+        "18": {
+            "type": "action",
+            "one": "19",
+            "content": "parts = text.split(\" \")"
+        },
+        "19": {
+            "type": "action",
+            "one": "21",
+            "content": "fun = parts[1]\narg = parts[2]"
+        },
+        "21": {
+            "type": "action",
+            "one": "22",
+            "content": "result = {}"
+        },
+        "22": {
+            "type": "action",
+            "one": "23",
+            "content": "result[type] = fun\nresult.arg = arg\nresult.id = item.id"
+        },
+        "23": {
+            "type": "action",
+            "one": "1",
+            "content": "return result"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "item"
+}

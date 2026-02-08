@@ -1,0 +1,33 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "7"
+        },
+        "7": {
+            "type": "action",
+            "one": "8",
+            "two": "",
+            "content": "op = {\n    op: \"feedback\",\n    variable: getText(item),\n    actor: item.actor,\n    join: context.idToJoin[left.join],\n    targetActor: left.actor,\n    targetVar: getText(left),\n    targetOp: left.next\n}"
+        },
+        "8": {
+            "type": "action",
+            "one": "1",
+            "content": "pushOp(context, op)"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "context\nitem\nleft"
+}

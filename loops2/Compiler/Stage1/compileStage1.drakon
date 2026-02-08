@@ -1,0 +1,52 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "7"
+        },
+        "3": {
+            "type": "action",
+            "one": "1",
+            "content": "return stage1"
+        },
+        "4": {
+            "type": "loopend",
+            "one": "3",
+            "content": ""
+        },
+        "5": {
+            "type": "loopbegin",
+            "one": "8",
+            "content": "name, diagram; interpreter.loopDiagrams"
+        },
+        "7": {
+            "type": "action",
+            "one": "5",
+            "content": "stage1 = {}"
+        },
+        "8": {
+            "type": "action",
+            "one": "9",
+            "content": "diagram2 = diagramStage1(\n    interpreter,\n    diagram,\n    name\n)"
+        },
+        "9": {
+            "type": "action",
+            "one": "4",
+            "content": "stage1[name] = diagram2"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "interpreter"
+}

@@ -1,0 +1,23 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "7"
+        },
+        "6": {
+            "type": "action",
+            "one": "1",
+            "content": "self.handlers = {\n    end: endHandler,\n    fun: funHandler,\n    loop: loopHandler,\n    chunk: chunkHandler,\n    callback: callbackHandler,\n    receive: receiveHandler,\n    feedback: feedbackHandler\n}"
+        },
+        "7": {
+            "type": "action",
+            "one": "6",
+            "content": "self.callbacks = {}"
+        }
+    }
+}

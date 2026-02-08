@@ -1,0 +1,13 @@
+{
+    "type": "drakon",
+    "items": {},
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": true,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": ""
+}

@@ -1,0 +1,59 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "5"
+        },
+        "4": {
+            "type": "loopend",
+            "one": "1",
+            "content": ""
+        },
+        "5": {
+            "type": "loopbegin",
+            "one": "7",
+            "content": "i = op.ports.length - 1; i >= 0; i--"
+        },
+        "6": {
+            "type": "action",
+            "one": "8",
+            "content": "name = port[0]\nopId = port[1]"
+        },
+        "7": {
+            "type": "action",
+            "one": "6",
+            "content": "port = op.ports[i]"
+        },
+        "8": {
+            "type": "action",
+            "one": "9",
+            "content": "frame.locals[name] = output[name]"
+        },
+        "9": {
+            "type": "question",
+            "one": "10",
+            "two": "4",
+            "flag1": 1,
+            "content": "opId"
+        },
+        "10": {
+            "type": "action",
+            "one": "4",
+            "content": "frame.stack.push(opId)"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "frame\nop\noutput"
+}

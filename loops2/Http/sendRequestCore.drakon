@@ -1,0 +1,88 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "4",
+            "content": "Create request"
+        },
+        "4": {
+            "type": "action",
+            "one": "15",
+            "content": "xhr = new XMLHttpRequest()"
+        },
+        "5": {
+            "type": "branch",
+            "one": "14",
+            "branchId": 4,
+            "content": "Send"
+        },
+        "6": {
+            "type": "branch",
+            "one": "9",
+            "branchId": 2,
+            "content": "Headers"
+        },
+        "7": {
+            "type": "loopend",
+            "one": "11",
+            "content": ""
+        },
+        "8": {
+            "type": "loopbegin",
+            "one": "10",
+            "content": "name, value; headers"
+        },
+        "9": {
+            "type": "question",
+            "one": "8",
+            "two": "11",
+            "flag1": 1,
+            "content": "headers"
+        },
+        "10": {
+            "type": "action",
+            "one": "7",
+            "content": "xhr.setRequestHeader(name, value);"
+        },
+        "11": {
+            "type": "branch",
+            "branchId": 3,
+            "one": "12",
+            "content": "Callbacks"
+        },
+        "12": {
+            "type": "action",
+            "one": "13",
+            "content": "xhr.onload = function () {\n    resolve(\n        {\n            status: xhr.status,\n            body: xhr.responseText\n        }\n    );\n};"
+        },
+        "13": {
+            "type": "action",
+            "one": "5",
+            "content": "xhr.onerror = function () {\n    reject(\n        new Error(\n            \"Network error: \" + url\n        )\n    );\n};"
+        },
+        "14": {
+            "type": "action",
+            "one": "1",
+            "content": "xhr.send(body)"
+        },
+        "15": {
+            "type": "action",
+            "one": "6",
+            "content": "xhr.open(method, url, true )"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "method\nurl\nbody\nheaders\nresolve\nreject"
+}

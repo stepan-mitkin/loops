@@ -1,0 +1,262 @@
+{
+    "items": {
+        "5": {
+            "zIndex": 0,
+            "left": -625,
+            "top": 55,
+            "type": "rectangle",
+            "content": "<p>command?</p>",
+            "height": 50,
+            "width": 185
+        },
+        "10": {
+            "zIndex": 1,
+            "width": 185,
+            "top": -265,
+            "style": "{\"font\":\"bold 15px Arimo\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}",
+            "left": -625,
+            "type": "f_begin",
+            "content": "<p>buttons</p>",
+            "height": 50
+        },
+        "12": {
+            "zIndex": 2,
+            "width": 145,
+            "top": -265,
+            "style": "{\"font\":\"bold 15px Arimo\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}",
+            "left": -380,
+            "type": "f_begin",
+            "content": "<p>cabin</p>",
+            "height": 50
+        },
+        "39": {
+            "zIndex": 3,
+            "left": -625,
+            "top": -35,
+            "type": "rectangle",
+            "content": "<p>command?</p>",
+            "height": 50,
+            "width": 185
+        },
+        "61": {
+            "zIndex": 4,
+            "width": 105,
+            "top": -265,
+            "style": "{\"font\":\"bold 15px Arimo\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}",
+            "left": -180,
+            "type": "f_begin",
+            "content": "<p>door</p>",
+            "height": 50
+        },
+        "63": {
+            "zIndex": 5,
+            "width": 105,
+            "top": 40,
+            "left": -180,
+            "content": "<p>start</p>",
+            "type": "rounded",
+            "aux": 10,
+            "height": 50
+        },
+        "64": {
+            "zIndex": 6,
+            "width": 145,
+            "top": -35,
+            "left": -380,
+            "content": "<p>onCommand</p>",
+            "type": "rounded",
+            "aux": 10,
+            "height": 50
+        },
+        "67": {
+            "zIndex": 19,
+            "begin": "12",
+            "role": "vertical",
+            "type": "connection",
+            "end": "64",
+            "style": "{\"headStyle\":\"none\"}"
+        },
+        "71": {
+            "zIndex": 20,
+            "begin": "61",
+            "role": "vertical",
+            "type": "connection",
+            "end": "63",
+            "style": "{\"headStyle\":\"none\"}"
+        },
+        "78": {
+            "zIndex": 7,
+            "width": 185,
+            "top": -110,
+            "left": -625,
+            "content": "<p>click</p>",
+            "type": "rounded",
+            "aux": 10,
+            "height": 50
+        },
+        "80": {
+            "zIndex": 21,
+            "begin": "78",
+            "role": "vertical",
+            "type": "connection",
+            "end": "39",
+            "style": "{\"headStyle\":\"none\"}"
+        },
+        "82": {
+            "zIndex": 8,
+            "left": -380,
+            "top": 40,
+            "type": "rectangle",
+            "content": "<p>doorTarget?</p>",
+            "height": 50,
+            "width": 145
+        },
+        "83": {
+            "zIndex": 22,
+            "begin": "82",
+            "role": "horizontal",
+            "type": "connection",
+            "end": "63",
+            "style": "{\"font\":\"15px Arimo\",\"headStyle\":\"arrow\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "84": {
+            "zIndex": 9,
+            "width": 150,
+            "top": 55,
+            "left": -835,
+            "content": "<p>requestUpdate</p>",
+            "type": "f_ptr_left",
+            "aux": 30,
+            "height": 50
+        },
+        "85": {
+            "zIndex": 23,
+            "begin": "5",
+            "role": "horizontal",
+            "type": "connection",
+            "end": "84",
+            "style": "{\"headStyle\":\"arrow\"}"
+        },
+        "86": {
+            "zIndex": 22,
+            "begin": "39",
+            "role": "vertical",
+            "type": "connection",
+            "end": "5",
+            "style": "{\"font\":\"15px Arimo\",\"headStyle\":\"none\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "87": {
+            "zIndex": 11,
+            "begin": "64",
+            "role": "vertical",
+            "type": "connection",
+            "end": "82",
+            "style": "{\"headStyle\":\"none\"}"
+        },
+        "88": {
+            "zIndex": 10,
+            "left": -625,
+            "top": -190,
+            "type": "rectangle",
+            "content": "<p>ONE findButton event</p>",
+            "height": 50,
+            "width": 185
+        },
+        "90": {
+            "zIndex": 12,
+            "begin": "88",
+            "role": "vertical",
+            "type": "connection",
+            "end": "78",
+            "style": "{\"headStyle\":\"none\"}"
+        },
+        "93": {
+            "zIndex": 11,
+            "width": 100,
+            "top": -265,
+            "style": "{\"font\":\"bold 15px Arimo\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}",
+            "left": -40,
+            "type": "f_begin",
+            "content": "<p>motor</p>",
+            "height": 50
+        },
+        "94": {
+            "zIndex": 12,
+            "left": -380,
+            "top": 115,
+            "type": "rectangle",
+            "content": "<p>motorTarget?</p>",
+            "height": 50,
+            "width": 145
+        },
+        "95": {
+            "zIndex": 13,
+            "width": 100,
+            "top": 115,
+            "left": -40,
+            "content": "<p>start</p>",
+            "type": "rounded",
+            "aux": 10,
+            "height": 50
+        },
+        "96": {
+            "zIndex": 17,
+            "begin": "94",
+            "role": "horizontal",
+            "type": "connection",
+            "end": "95",
+            "style": "{\"headStyle\":\"arrow\"}"
+        },
+        "97": {
+            "zIndex": 17,
+            "begin": "93",
+            "role": "vertical",
+            "type": "connection",
+            "end": "95",
+            "style": "{\"font\":\"15px Arimo\",\"headStyle\":\"none\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "98": {
+            "zIndex": 14,
+            "left": -810,
+            "top": -265,
+            "type": "rectangle",
+            "content": "<p>event</p>",
+            "height": 50,
+            "width": 125
+        },
+        "99": {
+            "zIndex": 18,
+            "begin": "98",
+            "role": "horizontal",
+            "type": "connection",
+            "end": "10",
+            "style": "{\"headStyle\":\"none\"}"
+        },
+        "100": {
+            "zIndex": 17,
+            "begin": "10",
+            "role": "vertical",
+            "type": "connection",
+            "end": "88",
+            "style": "{\"headStyle\":\"none\"}"
+        },
+        "108": {
+            "zIndex": 20,
+            "begin": "82",
+            "role": "vertical",
+            "type": "connection",
+            "end": "94",
+            "style": "{\"font\":\"15px Arimo\",\"headStyle\":\"none\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "109": {
+            "zIndex": 15,
+            "begin": "39",
+            "role": "horizontal",
+            "type": "connection",
+            "end": "64",
+            "style": "{\"headStyle\":\"arrow\"}"
+        }
+    },
+    "type": "free",
+    "id": "onClick.free"
+}

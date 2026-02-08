@@ -1,0 +1,66 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "13"
+        },
+        "4": {
+            "type": "action",
+            "one": "15",
+            "content": "joins[op.join]--"
+        },
+        "5": {
+            "type": "question",
+            "one": "16",
+            "two": "1",
+            "flag1": 0,
+            "content": "joins[op.join] > 0"
+        },
+        "10": {
+            "type": "action",
+            "one": "11",
+            "content": "arg = getVariable(interpreter, op)"
+        },
+        "11": {
+            "type": "action",
+            "one": "4",
+            "content": "setVariable(\n    interpreter,\n    op.targetActor,\n    op.targetVar,\n    arg\n)"
+        },
+        "12": {
+            "type": "action",
+            "one": "10",
+            "two": "",
+            "content": "joins = runState.joins"
+        },
+        "13": {
+            "type": "action",
+            "one": "12",
+            "two": "",
+            "content": "stack = runState.stack"
+        },
+        "15": {
+            "type": "action",
+            "one": "5",
+            "content": "stack.push(op.next)"
+        },
+        "16": {
+            "type": "action",
+            "one": "1",
+            "content": "stack.push(op.targetOp)"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "interpreter\nloop\nrunState\nop"
+}

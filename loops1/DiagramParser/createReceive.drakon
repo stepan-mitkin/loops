@@ -1,0 +1,43 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "10"
+        },
+        "10": {
+            "type": "action",
+            "one": "12",
+            "two": "",
+            "content": "op = {\n    op: \"receive\",\n    actor: item.actor,\n    join: context.joins\n}"
+        },
+        "11": {
+            "type": "action",
+            "one": "13",
+            "content": "context.joins++"
+        },
+        "12": {
+            "type": "action",
+            "one": "11",
+            "content": "context.idToJoin[item.id] = op.join"
+        },
+        "13": {
+            "type": "action",
+            "one": "1",
+            "content": "pushOp(context, op)"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "context\nitem"
+}

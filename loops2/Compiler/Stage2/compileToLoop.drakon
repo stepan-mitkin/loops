@@ -1,0 +1,58 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "7"
+        },
+        "3": {
+            "type": "action",
+            "one": "12",
+            "content": "flattenSubtree(\n    diagram.items,\n    context,\n    diagram.start\n)"
+        },
+        "7": {
+            "type": "action",
+            "one": "3",
+            "content": "context = {\n    idToOrdinal: {},\n    idToJoin: {},\n    joins: 0,\n    ops: []\n}"
+        },
+        "8": {
+            "type": "action",
+            "one": "9",
+            "two": "",
+            "content": "loop = {\n    name: diagram.name,\n    ops: context.ops,\n    startActor: context.startActor,\n    params: diagram.params,\n    joinCount: context.joins\n}"
+        },
+        "9": {
+            "type": "action",
+            "one": "1",
+            "content": "return loop"
+        },
+        "11": {
+            "type": "loopend",
+            "one": "8",
+            "content": ""
+        },
+        "12": {
+            "type": "loopbegin",
+            "one": "13",
+            "content": "op; context.ops"
+        },
+        "13": {
+            "type": "action",
+            "one": "11",
+            "content": "rewirePointers(context.idToOrdinal, op)"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "diagram"
+}

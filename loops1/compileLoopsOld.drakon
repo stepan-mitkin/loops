@@ -1,0 +1,129 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "3",
+            "content": "Init interpreter"
+        },
+        "3": {
+            "type": "action",
+            "one": "6",
+            "content": "interpreter.actors = {\n    grey: {},\n    yellow: {}\n}"
+        },
+        "6": {
+            "type": "action",
+            "one": "15",
+            "content": "ops = []"
+        },
+        "14": {
+            "type": "branch",
+            "one": "29",
+            "branchId": 4,
+            "content": "AddFakeLoop"
+        },
+        "15": {
+            "type": "branch",
+            "one": "17",
+            "branchId": 2,
+            "content": "Grey ops"
+        },
+        "16": {
+            "type": "action",
+            "one": "23",
+            "two": "",
+            "content": "ops.push({op: \"end\"})"
+        },
+        "17": {
+            "type": "action",
+            "one": "18",
+            "two": "",
+            "content": "ops.push(\n    {\n        op: \"fun\",\n        fun: \"appleToOrange\",\n        actor: \"grey\",\n        next: 1\n    }\n)"
+        },
+        "18": {
+            "type": "action",
+            "one": "19",
+            "two": "",
+            "content": "ops.push(\n    {\n        op: \"chunk\",\n        variable: \"orange\",\n        actor: \"grey\",\n        next: 2,\n        targetActor: \"yellow\",\n        targetVar: \"orange\",\n        targetOp: 7\n    }\n)"
+        },
+        "19": {
+            "type": "action",
+            "one": "20",
+            "two": "",
+            "content": "ops.push(\n    {\n        op: \"fun\",\n        fun: \"processOrange\",\n        actor: \"grey\",\n        next: 3\n    }\n)"
+        },
+        "20": {
+            "type": "action",
+            "one": "21",
+            "two": "",
+            "content": "ops.push(\n    {\n        op: \"receive\",\n        actor: \"grey\",\n        next: 4,\n        join: 0\n    }\n)"
+        },
+        "21": {
+            "type": "action",
+            "one": "22",
+            "two": "",
+            "content": "ops.push(\n    {\n        op: \"fun\",\n        fun: \"makeCarrot\",\n        actor: \"grey\",\n        next: 5\n    }\n)"
+        },
+        "22": {
+            "type": "action",
+            "one": "16",
+            "two": "",
+            "content": "ops.push(\n    {\n        op: \"callback\",\n        callback: \"foo\",\n        variable: \"carrot\",\n        actor: \"grey\",\n        next: 6\n    }\n)"
+        },
+        "23": {
+            "type": "branch",
+            "branchId": 3,
+            "one": "24",
+            "content": "Yellow ops"
+        },
+        "24": {
+            "type": "action",
+            "one": "25",
+            "two": "",
+            "content": "ops.push(\n    {\n        op: \"fun\",\n        fun: \"makeVegetables\",\n        actor: \"yellow\",\n        next: 8\n    }\n)"
+        },
+        "25": {
+            "type": "action",
+            "one": "26",
+            "two": "",
+            "content": "ops.push(\n    {\n        op: \"feedback\",\n        variable: \"tomato\",\n        actor: \"yellow\",\n        next: 9,\n        join: 0,\n        targetActor: \"grey\",\n        targetVar: \"soup\",\n        targetOp: 4\n    }\n)"
+        },
+        "26": {
+            "type": "action",
+            "one": "27",
+            "two": "",
+            "content": "ops.push(\n    {\n        op: \"callback\",\n        callback: \"bar\",\n        variable: \"tomato\",\n        actor: \"yellow\",\n        next: 10\n    }\n)"
+        },
+        "27": {
+            "type": "action",
+            "one": "14",
+            "two": "",
+            "content": "ops.push({op: \"end\"})"
+        },
+        "28": {
+            "type": "action",
+            "one": "1",
+            "two": "",
+            "content": "interpreter.loops = {\n    \"OuterNothing\": onothing\n}"
+        },
+        "29": {
+            "type": "action",
+            "one": "28",
+            "two": "",
+            "content": "onothing = {\n    ops: ops,\n    startActor: \"grey\",\n    startVariable: \"apple\",\n    joinCount: 1\n}"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "interpreter"
+}

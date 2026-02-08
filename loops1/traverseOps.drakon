@@ -1,0 +1,58 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "8"
+        },
+        "3": {
+            "type": "action",
+            "one": "5",
+            "content": "currentOpId = stack.pop()"
+        },
+        "5": {
+            "type": "action",
+            "one": "6",
+            "content": "op = loop.ops[currentOpId]"
+        },
+        "6": {
+            "type": "action",
+            "one": "7",
+            "content": "handler = getHandler(op.op)"
+        },
+        "7": {
+            "type": "action",
+            "one": "9",
+            "content": "handler(interpreter, loop, runState, op)"
+        },
+        "8": {
+            "type": "action",
+            "one": "10",
+            "content": "stack = runState.stack"
+        },
+        "9": {
+            "type": "question",
+            "one": "1",
+            "two": "10",
+            "flag1": 1,
+            "content": "stack.length === 0"
+        },
+        "10": {
+            "type": "arrow-loop",
+            "one": "3"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "interpreter\nloop\nrunState"
+}

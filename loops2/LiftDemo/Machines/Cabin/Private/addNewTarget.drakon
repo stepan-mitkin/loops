@@ -1,0 +1,64 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "7"
+        },
+        "3": {
+            "type": "action",
+            "one": "1",
+            "content": "upButtons[button.floor] = true "
+        },
+        "4": {
+            "type": "case",
+            "one": "9",
+            "content": "\"inner\""
+        },
+        "5": {
+            "type": "case",
+            "one": "8",
+            "two": "4",
+            "content": "\"down\""
+        },
+        "6": {
+            "type": "case",
+            "one": "3",
+            "two": "5",
+            "content": "\"up\""
+        },
+        "7": {
+            "type": "select",
+            "one": "6",
+            "content": "button.role"
+        },
+        "8": {
+            "type": "action",
+            "one": "1",
+            "content": "downButtons[button.floor] = true "
+        },
+        "9": {
+            "type": "action",
+            "one": "10",
+            "content": "downButtons[button.floor] = true "
+        },
+        "10": {
+            "type": "action",
+            "one": "1",
+            "content": "upButtons[button.floor] = true "
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "button"
+}

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>LOOPS Lift demo</title>
+
+        <link rel="stylesheet" href="styles/reset.css" />
+        <style>
+            body {
+                background: white;
+                padding: 10px;
+            }
+            .button-basis {
+                background: #dfdfdf;
+                color: black;
+                cursor: pointer;
+                user-select: none;
+            }
+
+            .button-basis:hover {
+                background: #ffffdf;
+                color: black;
+            }
+            .button-basis:active {
+                color: #ffffdf;
+                background: black;
+            }
+
+            .center-message {
+                display: grid;
+                place-items: center;
+                color: black;
+                height: 100vh;
+            }
+            .main-view {
+                max-width: 100%;
+            }
+
+            .main-view img {
+                display: inline-block;
+                max-width: 100%;
+            }
+            .diagram-header {
+                margin-top: 30px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <p><a href="https://github.com/stepan-mitkin/loops">Home</a></p>
+        <h1>LOOPS Lift demo</h1>
+        <p>Press the lift buttons to make it move.</p>
+        <div id="main"></div>
+        <div class="main-view">
+            <h2>LOOPS diagrams from the demo</h2>
+            <div class="diagram-header">onClick</div>
+            <img
+                src="images/onClick.png"
+                style="width: 935px"
+                alt="onClick LOOPS diagram"
+            />
+            <div class="diagram-header">updateDoor</div>
+            <img
+                src="images/updateDoor.png"
+                style="width: 1200px"
+                alt="updateDoor LOOPS diagram"
+            />
+            <div class="diagram-header">updateMotor</div>
+            <img
+                src="images/updateMotor.png"
+                style="width: 805px"
+                alt="updateMotor LOOPS diagram"
+            />
+        </div>
+        <script src="js/tools.js"></script>
+        <script src="js/loops2.js"></script>
+        <script src="js/loops2-lift.js"></script>
+    </body>
+</html>

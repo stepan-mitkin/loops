@@ -1,0 +1,39 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 0,
+            "one": "3"
+        },
+        "3": {
+            "type": "action",
+            "one": "6",
+            "content": "frame.locals[name] = arg"
+        },
+        "4": {
+            "type": "action",
+            "one": "1",
+            "content": "continueLoop(obj, loop, frame, opId)"
+        },
+        "6": {
+            "type": "question",
+            "one": "4",
+            "two": "1",
+            "flag1": 1,
+            "content": "opId"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": false,
+        "export": false,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": "obj\nloop\nframe\nopId\nname\narg"
+}

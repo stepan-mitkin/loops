@@ -1,0 +1,237 @@
+{
+    "type": "drakon",
+    "items": {
+        "1": {
+            "type": "end"
+        },
+        "2": {
+            "type": "branch",
+            "branchId": 1,
+            "one": "36",
+            "content": "Compile"
+        },
+        "20": {
+            "type": "action",
+            "one": "21",
+            "content": "compiler = Compiler()"
+        },
+        "21": {
+            "type": "action",
+            "one": "31",
+            "content": "compiler.createType(\"Red\")"
+        },
+        "23": {
+            "type": "action",
+            "one": "20",
+            "content": "folder = \"loops2-data\""
+        },
+        "31": {
+            "type": "action",
+            "one": "34",
+            "content": "red = [\n    \"subLoopActorManyLoop\",\n    \"subLoopActorOneChunk\",\n    \"callSequental\",\n    \"chunkFunction\",\n    \"chunkFunctionJoin\",\n    \"conditionalOutputs\",\n    \"oneInputTwoOutputs\",\n    \"sequental\",\n    \"subLoop\",\n    \"subLoopActorManyChunk\",\n    \"subLoopActorOne\",\n    \"subLoopChunk\",\n    \"subLoopVar\"\n]"
+        },
+        "33": {
+            "type": "loopend",
+            "one": "71",
+            "content": ""
+        },
+        "34": {
+            "type": "loopbegin",
+            "one": "35",
+            "content": "name; red"
+        },
+        "35": {
+            "type": "action",
+            "one": "33",
+            "content": "await addLoopToType(\n    compiler,\n    folder,\n    \"Red\",\n    name\n)"
+        },
+        "36": {
+            "type": "action",
+            "one": "23",
+            "content": "initLog()"
+        },
+        "37": {
+            "type": "branch",
+            "one": "1",
+            "branchId": 4,
+            "content": "Exit"
+        },
+        "38": {
+            "type": "branch",
+            "one": "39",
+            "branchId": 2,
+            "content": "Create objects"
+        },
+        "39": {
+            "type": "action",
+            "one": "47",
+            "content": "machine = Interpreter()"
+        },
+        "41": {
+            "type": "action",
+            "one": "42",
+            "content": "grey = machine.createCodeObject(\n    ImaginaryButton(\"grey\")\n)"
+        },
+        "42": {
+            "type": "action",
+            "one": "75",
+            "content": "yellow = machine.createCodeObject(\n    ImaginaryButton(\"yellow\")\n)"
+        },
+        "43": {
+            "type": "action",
+            "one": "45",
+            "content": "root = machine.createLoopObject(\n    compiler.getType(\"Red\"),\n    actors,\n    RedFunctions()\n)"
+        },
+        "44": {
+            "type": "action",
+            "one": "43",
+            "content": "actors = {\n    buttons: [grey, yellow],\n    buttons2: [grey2, yellow2]\n}"
+        },
+        "45": {
+            "type": "branch",
+            "branchId": 3,
+            "one": "57",
+            "content": "Run"
+        },
+        "46": {
+            "type": "action",
+            "one": "37",
+            "content": "machine.runLoop(root, \"callSequental\", 7)"
+        },
+        "47": {
+            "type": "action",
+            "one": "41",
+            "content": "makeFakeCallbacks(\n    machine,\n    [\n        \"foo\",\n        \"bar\",\n        \"u1\",\n        \"u2\",\n        \"out1\",\n        \"out2\",\n        \"out3\"\n    ]\n)"
+        },
+        "48": {
+            "type": "action",
+            "one": "49",
+            "content": "machine.runLoop(\n    root,\n    \"conditionalOutputs\",\n    5\n)"
+        },
+        "49": {
+            "type": "action",
+            "one": "51",
+            "content": "machine.runLoop(\n    root,\n    \"conditionalOutputs\",\n    6\n)"
+        },
+        "51": {
+            "type": "action",
+            "one": "52",
+            "content": "machine.runLoop(root, \"chunkFunction\", 4)"
+        },
+        "52": {
+            "type": "action",
+            "one": "54",
+            "content": "machine.runLoop(\n    root,\n    \"chunkFunctionJoin\",\n    4\n)"
+        },
+        "53": {
+            "type": "action",
+            "one": "48",
+            "content": "machine.runLoop(\n    root,\n    \"oneInputTwoOutputs\",\n    10\n)"
+        },
+        "54": {
+            "type": "action",
+            "one": "55",
+            "content": "machine.runLoop(root, \"subLoop\", 2)"
+        },
+        "55": {
+            "type": "action",
+            "one": "65",
+            "content": "machine.runLoop(root, \"subLoopChunk\", 3)"
+        },
+        "56": {
+            "type": "question",
+            "one": "53",
+            "two": "68",
+            "flag1": 0,
+            "content": "one"
+        },
+        "57": {
+            "type": "action",
+            "one": "56",
+            "content": "one = false "
+        },
+        "59": {
+            "type": "action",
+            "one": "63",
+            "content": "longfun = 2"
+        },
+        "61": {
+            "type": "case",
+            "one": "64",
+            "two": null,
+            "content": "2"
+        },
+        "62": {
+            "type": "case",
+            "one": "46",
+            "two": "61",
+            "content": "1"
+        },
+        "63": {
+            "type": "select",
+            "one": "62",
+            "content": "longfun"
+        },
+        "64": {
+            "type": "action",
+            "one": "37",
+            "content": "machine.runLoop(root, \"subLoopVar\", 7)"
+        },
+        "65": {
+            "type": "action",
+            "one": "69",
+            "content": "machine.runLoop(\n    root,\n    \"subLoopActorOne\",\n    \"yellow\"\n)"
+        },
+        "68": {
+            "type": "action",
+            "one": "37",
+            "content": "machine.runLoop(\n    root,\n    \"subLoopActorManyLoop\",\n    \"cool\"\n)"
+        },
+        "69": {
+            "type": "action",
+            "one": "70",
+            "content": "machine.runLoop(\n    root,\n    \"subLoopActorOneChunk\",\n    \"fine\"\n)"
+        },
+        "70": {
+            "type": "action",
+            "one": "77",
+            "content": "machine.runLoop(\n    root,\n    \"subLoopActorManyChunk\",\n    \"fine\"\n)"
+        },
+        "71": {
+            "type": "action",
+            "one": "72",
+            "content": "compiler.createType(\"Butt2\")"
+        },
+        "72": {
+            "type": "action",
+            "one": "38",
+            "content": "await addLoopToType(\n    compiler,\n    folder,\n    \"Butt2\",\n    \"reset\"\n)"
+        },
+        "75": {
+            "type": "action",
+            "one": "76",
+            "two": "",
+            "content": "grey2 = machine.createLoopObject(\n    compiler.getType(\"Butt2\"),\n    {},\n    Butt2(\"grey\")\n)"
+        },
+        "76": {
+            "type": "action",
+            "one": "44",
+            "two": "",
+            "content": "yellow2 = machine.createLoopObject(\n    compiler.getType(\"Butt2\"),\n    {},\n    Butt2(\"yellow\")\n)"
+        },
+        "77": {
+            "type": "action",
+            "one": "59",
+            "content": "machine.runLoop(\n    root,\n    \"subLoopActorManyLoop\",\n    \"cool\"\n)"
+        }
+    },
+    "keywords": {
+        "function": true,
+        "machine": false,
+        "async": true,
+        "export": true,
+        "algoprop": false,
+        "lazy": false
+    },
+    "params": ""
+}

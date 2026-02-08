@@ -1,0 +1,210 @@
+{
+    "items": {
+        "10": {
+            "zIndex": 0,
+            "width": 120,
+            "top": -190,
+            "style": "{\"font\":\"bold 15px Arimo\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}",
+            "left": -370,
+            "type": "f_begin",
+            "content": "<p>motor</p>",
+            "height": 50
+        },
+        "12": {
+            "zIndex": 1,
+            "width": 115,
+            "top": -190,
+            "style": "{\"font\":\"bold 15px Arimo\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}",
+            "left": -195,
+            "type": "f_begin",
+            "content": "<p>cabin</p>",
+            "height": 50
+        },
+        "39": {
+            "zIndex": 2,
+            "left": -370,
+            "top": -20,
+            "type": "rectangle",
+            "content": "<p>done?</p>",
+            "height": 50,
+            "width": 120
+        },
+        "61": {
+            "zIndex": 3,
+            "width": 120,
+            "top": -190,
+            "style": "{\"font\":\"bold 15px Arimo\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}",
+            "left": -25,
+            "type": "f_begin",
+            "content": "<p>door</p>",
+            "height": 50
+        },
+        "63": {
+            "zIndex": 4,
+            "width": 120,
+            "top": 55,
+            "left": -25,
+            "content": "<p>start</p>",
+            "type": "rounded",
+            "aux": 10,
+            "height": 50
+        },
+        "64": {
+            "zIndex": 5,
+            "width": 115,
+            "top": -20,
+            "left": -195,
+            "content": "<p>onArrived</p>",
+            "type": "rounded",
+            "aux": 10,
+            "height": 50
+        },
+        "67": {
+            "zIndex": 19,
+            "begin": "12",
+            "role": "vertical",
+            "type": "connection",
+            "end": "64",
+            "style": "{\"headStyle\":\"none\"}"
+        },
+        "71": {
+            "zIndex": 20,
+            "begin": "61",
+            "role": "vertical",
+            "type": "connection",
+            "end": "63",
+            "style": "{\"headStyle\":\"none\"}"
+        },
+        "78": {
+            "zIndex": 6,
+            "width": 120,
+            "top": -100,
+            "left": -370,
+            "content": "<p>updateMotor</p>",
+            "type": "rounded",
+            "aux": 10,
+            "height": 50
+        },
+        "79": {
+            "zIndex": 21,
+            "begin": "39",
+            "role": "horizontal",
+            "type": "connection",
+            "end": "64",
+            "style": "{\"font\":\"15px Arimo\",\"headStyle\":\"arrow\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "82": {
+            "zIndex": 7,
+            "left": -195,
+            "top": 55,
+            "type": "rectangle",
+            "content": "<p>doorTarget</p>",
+            "height": 50,
+            "width": 115
+        },
+        "83": {
+            "zIndex": 22,
+            "begin": "82",
+            "role": "horizontal",
+            "type": "connection",
+            "end": "63",
+            "style": "{\"font\":\"15px Arimo\",\"headStyle\":\"arrow\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "87": {
+            "zIndex": 11,
+            "begin": "64",
+            "role": "vertical",
+            "type": "connection",
+            "end": "82",
+            "style": "{\"headStyle\":\"none\"}"
+        },
+        "98": {
+            "zIndex": 8,
+            "left": -510,
+            "top": -190,
+            "type": "rectangle",
+            "content": "<p>dt</p>",
+            "height": 50,
+            "width": 75
+        },
+        "99": {
+            "zIndex": 12,
+            "begin": "98",
+            "role": "horizontal",
+            "type": "connection",
+            "end": "10",
+            "style": "{\"headStyle\":\"none\"}"
+        },
+        "100": {
+            "zIndex": 11,
+            "begin": "10",
+            "role": "vertical",
+            "type": "connection",
+            "end": "78",
+            "style": "{\"headStyle\":\"none\"}"
+        },
+        "101": {
+            "zIndex": 9,
+            "width": 130,
+            "top": -190,
+            "style": "{\"font\":\"bold 15px Arimo\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"center\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}",
+            "left": 125,
+            "type": "f_begin",
+            "content": "<p>cabin</p>",
+            "height": 50
+        },
+        "102": {
+            "zIndex": 10,
+            "width": 130,
+            "top": 135,
+            "left": 125,
+            "content": "<p>updatePosition</p>",
+            "type": "rounded",
+            "aux": 10,
+            "height": 50
+        },
+        "103": {
+            "zIndex": 19,
+            "begin": "101",
+            "role": "vertical",
+            "type": "connection",
+            "style": "{\"headStyle\":\"none\"}",
+            "end": "102"
+        },
+        "104": {
+            "zIndex": 11,
+            "left": -370,
+            "top": 135,
+            "type": "rectangle",
+            "content": "<p>position?</p>",
+            "height": 50,
+            "width": 120
+        },
+        "105": {
+            "zIndex": 14,
+            "begin": "39",
+            "role": "vertical",
+            "type": "connection",
+            "end": "104",
+            "style": "{\"headStyle\":\"none\"}"
+        },
+        "106": {
+            "zIndex": 14,
+            "begin": "104",
+            "role": "horizontal",
+            "type": "connection",
+            "end": "102",
+            "style": "{\"font\":\"15px Arimo\",\"headStyle\":\"arrow\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        },
+        "107": {
+            "zIndex": 12,
+            "begin": "78",
+            "role": "vertical",
+            "type": "connection",
+            "end": "39",
+            "style": "{\"font\":\"15px Arimo\",\"headStyle\":\"none\",\"iconBack\":\"\",\"color\":\"\",\"iconBorder\":\"\",\"internalLine\":\"\",\"lineHeight\":\"\",\"textAlign\":\"\",\"borderStyle\":\"\",\"shadowOffsetX\":0,\"shadowOffsetY\":0,\"shadowColor\":\"\",\"shadowBlur\":0,\"borderWidth\":\"\"}"
+        }
+    },
+    "type": "free",
+    "id": "updateMotor.free"
+}
